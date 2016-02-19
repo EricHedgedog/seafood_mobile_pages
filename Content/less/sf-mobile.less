@@ -1,0 +1,132 @@
+body{
+	background: #F5F5F5;
+}
+
+/*头部*/
+.sf-hd{
+	padding:0 10px;
+	position:relative;
+	height:38px;
+	background-color:#0396e4;
+	.sf_back{
+		display:inline-block;
+		width:10%;
+		height:38px;
+		float: left;
+		background: url('/Content/images/back_arrow.png') no-repeat 0px 11px;
+  		background-size: 10px 19px;
+
+	}
+	.hd_text{
+		text-align:center;
+		width:80%;
+		float: left;
+		display: inline-block;
+		line-height:38px;
+		color: #ffffff;
+	}
+	.sf_opt{
+		float: left;
+		display: inline-block;
+		width: 10%;
+		line-height: 38px;
+		text-align: right;
+		color: #ffffff;
+
+	}
+	.sf_search{
+		background: url('/Content/images/main/search.png') no-repeat center;
+  		background-size: 17px 17px;
+  		height: 38px;
+	}
+}
+
+/* 登录注册页面 */
+.lg-bd{
+	margin:0 10px;
+	.lg_user{
+		height: 38px;
+		border-bottom: 1px solid #e5e5e5;
+		input{
+			line-height: 38px;
+			padding-left: 33px;
+			border:none;
+			outline: medium;
+		}
+		.lg_username{
+			background: url('/Content/images/username.png') no-repeat 9px 11px;
+			background-size: 14px 15px;
+		}
+		.lg_pass{
+			background: url('/Content/images/password.png') no-repeat 9px 10px;
+			background-size: 13px 16px;
+		}
+		.lg_mobile{
+			background: url('/Content/images/mobile.png') no-repeat 9px 10px;
+			background-size: 10px 17px;
+		}
+		.lg_verify{
+			background: url('/Content/images/verify.png') no-repeat 9px 12px;
+			background-size: 16px 13px;
+		}
+		.show_pass{
+			float: right;
+			display: inline-block;
+			width: 30px;
+			height: 38px;
+			background: url('/Content/images/eye.png') no-repeat center;
+			background-size: 25px 17px;
+		}
+		.lg_code{
+			display: block;
+			margin-top: 5px;
+			line-height: 25px;
+			width: 80px;
+			float: right;
+			color: #A9A9A9;
+			text-align: center;
+			border: 1px solid #A9A9A9;
+			border-radius: 3px;
+		}
+	}
+	.lg_opt{
+		line-height: 38px;
+		color:#A9A9A9;
+		.fgt_pass{
+			float: right;
+			color: #A9A9A9
+		}
+		.lg_agree{
+			color:#0396e4;
+		}
+		input[type="radio"] {
+			display:none;
+		}
+		span{
+			vertical-align: text-bottom;
+			display: inline-block;
+			cursor: pointer;
+			margin-right:10px;
+			height: 10px;
+			width:10px;
+			border: 1px solid #A9A9A9;
+			border-radius: 3px;
+		}
+		span.checked{
+			height: 12px;
+			width:12px;
+			border: none;
+			background:url("/Content/images/sign.png") no-repeat 0 0;
+			background-size:12px 12px;
+		}
+		span.unchecked{
+		}
+	}
+	.lg_btn{
+		height: 40px;
+		width: 100%;
+		background-color:#0396e4;
+		color:#ffffff;
+		border-radius: 8px;
+	}
+}
