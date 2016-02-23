@@ -1,5 +1,12 @@
 body{
-	background: #F5F5F5;
+	background: #F4F4F4;
+}
+/* 字色 */
+.c_red{
+	color:#e61d27;
+}
+.c_grey{
+	color:#A9A9A9;
 }
 
 /*头部*/
@@ -129,4 +136,289 @@ body{
 		color:#ffffff;
 		border-radius: 8px;
 	}
+}
+
+/* 首页main.html */
+.main-bd{
+	background: #ffffff;
+}
+.main-slider{
+	/* display: none; */
+	width:100%;
+	height:130px;
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+.main-opts{
+	height:86px;
+	margin-bottom: 5px;
+	.opts{
+		display:block;
+		float: left;
+		// line-height: 86px;
+		padding-top: 63px;
+		width:20%;
+		text-align: center;
+		color:#333333;
+	}
+	.opt01{
+		background:url("/Content/images/main/s_cart.png") no-repeat 10px 10px;
+		background-size:contain;
+	}
+}
+
+/*支付成功 paysuccess.html  */
+.sc_info{
+	height: 187px;
+	.sc_logo{
+		height: 74px;
+		width: 74px;
+		margin: 58px auto 30px;
+		background:url("/Content/images/order/pay_success.png") no-repeat 0;
+		background-size:contain;
+	}
+	.sc_notice{
+		text-align: center;
+		color: #333333;
+		font-size: 14px;
+		font-weight: 700;
+	}
+}
+.sc_btn{
+	display: inline-block;
+	width:46%;
+	line-height: 36px;
+	text-align: center;
+	border: 1px solid #0396e4;
+	border-radius: 3px;
+}
+.sc_continue{
+	margin-left: 3%;
+	color: #0386e4;
+}
+.sc_detail{
+	background-color: #0396e4;
+	color:#ffffff;
+}
+
+/* 订单确认 orderconfirm.html */
+.cf_titles{
+	padding-left: 12px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	border-bottom: 1px solid #dfdfdf;
+}
+.cf_address{
+	height:60px;
+	padding: 10px 13px 15px 35px;
+	margin-bottom: 10px;
+	background:#ffffff url("/Content/images/order/map.png") no-repeat 9px;
+	background-size:16px 22px;
+	.cf_recv{
+	font-size: 14px;
+	font-weight: 700;
+	}
+	.cf_phone{
+		float: right;
+		padding-right: 20px;
+	}
+	.recv_address{
+		margin-top: 10px;
+		padding-right: 16px;
+		background:url("/Content/images/order/right_arrow.png") no-repeat right 3px;
+		background-size:6px 11px;
+	}
+}
+.cf_delivery{
+	height: 18px;
+	font-size: 14px;
+	padding: 12px 13px 15px 10px;
+	margin-bottom: 10px;
+	background: #ffffff;
+	.de_method{
+		float:right;
+		padding-right: 16px;
+		color:#A9A9A9;
+		background:url("/Content/images/order/right_arrow.png") no-repeat right center;
+		background-size:8px 15px;
+	}
+}
+.cf_info{
+	background: #ffffff;
+	margin-bottom: 10px;
+	.cf_item{
+		padding:0 10px 0 12px;
+		margin:18px 0;
+		.cf_pic{
+			width:19%;
+			float: left;
+			img{
+				width: 100%;
+			}
+		}
+		.cf_des{
+			float: left;
+			margin-left: 5px;
+			width: 44%;
+			.cf_name{
+				margin-bottom: 12px;
+			}
+			.cf_size{
+				color:#A9A9A9;
+			}
+		}
+		.cf_price{
+			float: right;
+			width: 34%;
+			text-align: right;
+			.cf_num{
+				margin-top: 25px;
+				color:#A9A9A9;
+			}
+		}
+	}
+	.cf_total{
+		padding-right: 10px;
+		line-height: 45px;
+		text-align: right;
+		border-top: 1px solid #dfdfdf;
+	}
+	.cf_fees{
+		line-height: 40px;
+		border-top: 1px solid #dfdfdf;
+		padding: 0 10px 0 12px;
+		.c_prc{
+			float: right;
+		}
+
+	}
+	.cf_comment{
+		height: 40px;
+		padding: 0 10px 0 12px;
+		border-top: 1px solid #dfdfdf;
+		input{
+			width:100%;
+			height: 100%;
+			border:none;
+			outline: medium;
+		}
+	}
+}
+.cf_paymethod{
+	background: #ffffff;
+	margin-bottom: 10px;
+	.pay_opts{
+		padding:0 10px 0 45px;
+		height: 45px;
+		border-bottom: 1px solid #dfdfdf;
+		font-size: 14px;
+		input[type="radio"]{
+			display: none;
+		}
+		label{
+			display: inline-block;
+			cursor: pointer;
+			line-height: 45px;
+			width: 100%;
+			background:url("/Content/images/order/red_unselect.png") no-repeat right;
+			background-size:19px 19px;
+		}
+		label.checked{
+			background:url("/Content/images/order/red_select.png") no-repeat right;
+			background-size:19px 19px;
+		}
+	}
+	.pay_zhifubao{
+		background:url("/Content/images/order/alipay.png") no-repeat 10px 8px;
+		background-size:28px 28px;
+	}
+	.pay_weixin{
+		background:url("/Content/images/order/wechat.png") no-repeat 10px 9px;
+		background-size:28px 25px;
+	}
+	.pay_yinlian{
+		background:url("/Content/images/order/upcash.png") no-repeat 10px 13px;
+		background-size:27px 17px;
+	}
+}
+.cf_coupon{
+	background: #ffffff;
+	margin-bottom: 10px;
+	.cp_form{
+		height: 70px;
+		padding: 10px 10px 13px 12px;
+		input{
+			line-height: 27px;
+			border:1px solid #dfdfdf;
+			border-radius: 3px;
+			margin-bottom: 10px;
+		}
+		#cp_num{
+			width:100%;
+		}
+		#cp_pass{
+			width:56%;
+		}
+		.cp_btn{
+			width: 41%;
+			height: 27px;
+			background-color: #0396e4;
+			color:#ffffff;
+			border-radius: 3px;
+		}
+	}
+}
+.cf_confirm{
+	background: #ffffff;
+	height:43px;
+	.cfm_all{
+		padding: 8px 0 8px 10px;
+		float: left;
+		.cfm_total{
+			margin-bottom: 4px;
+		}
+	}
+	.cfm_btn{
+		float: right;
+		width: 107px;
+		height:43px;
+		background-color: #0396e4;
+		color:#ffffff;
+		font-size: 14px;
+	}
+}
+
+
+/* emptycart.html */
+.sf-hd{
+	.sf_back{
+		background: none;
+	}
+}
+.ep_notice{
+	height: 224px;
+	.ep_logo{
+		height:165px;
+		background:url("/Content/images/main/empty_cart.png") no-repeat 46% 41px;
+		background-size:118px 95px;
+	}
+	.ep_cart{
+		margin-bottom: 10px;
+		text-align: center;
+		font-size: 14px;
+		font-weight: 700;
+	}
+	.ep_suggest{
+		text-align: center;
+		color:#A9A9A9;
+	}
+}
+.btn_continue{
+	width: 94%;
+	height: 40px;
+	margin-left:3%;
+	background: #0396e4;
+	color: #ffffff;
+	border-radius: 3px;
 }

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>订单确认</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minmum-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" /> 
+    <link rel="stylesheet" type="text/css" href="/Content/css/css-reset.css">
+    <link rel="stylesheet" type="text/css" href="/Content/css/sf-mobile.css">
+    <script type="text/javascript" src="/Scripts/jquery-1.9.1/jquery.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+<body>
+    <div class="sf-hd clearfix">
+        <a class="sf_back" href="#"></a>
+        <span class="hd_text"><b>订单确认</b></span>
+    </div>
+
+    <div class="confirm-bd">
+        <div class="cf_address">
+            <span class="cf_recv">收货人：</span>
+            <span class="cf_recv">张大大</span>
+            <span class="cf_recv cf_phone">13616212345</span>
+            <p class="recv_address">
+                <span>收货地址：</span>
+                <span>江苏省苏州市虎丘区湘江路533号仕德伟科技股份有限公司</span>
+            </p>
+        </div>
+
+        <div class="cf_delivery">
+            <span>配送方式</span>
+            <span class="de_method">快递</span>
+        </div>
+
+        <div class="cf_info">
+            <p class="cf_titles">商品信息</p>
+            <div class="cf_item clearfix">
+                <div class="cf_pic">
+                    <img src='/Content/images/main/pic09.jpg'>
+                </div>
+                <div class="cf_des">
+                    <p class="cf_name">阿根廷红虾L1大号4斤 海捕大虾</p>
+                    <p class="cf_size">规格：3KG</p>
+                </div>
+                <div class="cf_price">
+                    <p class="c_red">¥ 9.80</p>
+                    <p class="cf_num">x2</p>
+                </div>
+            </div>
+            <div class="cf_item clearfix">
+                <div class="cf_pic">
+                    <img src='/Content/images/main/pic09.jpg'>
+                </div>
+                <div class="cf_des">
+                    <p class="cf_name">阿根廷红虾L1大号4斤 海捕大虾</p>
+                    <p class="cf_size">规格：3KG</p>
+                </div>
+                <div class="cf_price">
+                    <p class="c_red">¥ 9.80</p>
+                    <p class="cf_num">x2</p>
+                </div>
+            </div>
+            <p class="cf_total"><span>商品合计：</span><span class="c_red">¥ 39.20</span></p>
+            <p class="cf_fees clearfix">运费（满60包邮）<span class="c_grey c_prc">10元</span></p>
+            <p class="cf_comment"><input class="cmt_input" type="text" placeholder="备注（如有特殊要求，请给我们留言）" /></p>
+        </div>
+
+        <div class="cf_paymethod">
+            <p class="cf_titles">支付方式：</p>
+            <p class="pay_opts pay_zhifubao">
+                <label class="checked">支付宝</label>
+                <input type="radio" class="selected" id="alipay" name="payment" value="">
+            </p>
+            <p class="pay_opts pay_weixin">
+                <label>微信支付</label>
+                <input type="radio" class="" id="wechat" name="payment" value="">
+            </p>
+            <p class="pay_opts pay_yinlian">
+                <label>银联支付</label>
+                <input type="radio" class="" id="upcash" name="payment" value="">
+            </p>
+        </div>
+
+        <div class="cf_coupon">
+            <p class="cf_titles">代金卷：</p>
+            <form method="" action="" class="cp_form">
+                <input type="text" placeholder="请输入卡号" id="cp_num" /><br/>
+                <input type="text" placeholder="请输入密码" id="cp_pass" />
+                <button class="cp_btn">提交</button>
+            </form>
+        </div>
+
+        <div class="cf_confirm clearfix">
+            <div class="cfm_all">
+                <p class="cfm_total"><span class="cfm_label">应付总额：</span><span class="c_red">¥ 59.10</span></p>
+                <p class="c_grey cfm_method">支付宝</p>
+            </div>
+            <button class="cfm_btn">结算（5）</button>
+        </div>
+    </div>
+</body>
+</html>
