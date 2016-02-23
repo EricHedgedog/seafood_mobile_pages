@@ -1,5 +1,6 @@
 body{
 	background: #F4F4F4;
+
 }
 /* 字色 */
 .c_red{
@@ -7,6 +8,9 @@ body{
 }
 .c_grey{
 	color:#A9A9A9;
+}
+.c_blue{
+	color:#0396e4;
 }
 
 /*头部*/
@@ -31,6 +35,26 @@ body{
 		display: inline-block;
 		line-height:38px;
 		color: #ffffff;
+		/*product页面头部*/
+		li{
+			display: inline-block;
+			width: 20%;
+		}
+		li.li_mid{
+			margin:0 12px;
+
+		}
+		li .p_tab{
+			border-bottom: 2px solid #ffffff;
+
+		}
+		li a{
+			display: inline-block;
+			height: 36px;
+			width: 100%;
+			color: #ffffff;
+		}
+
 	}
 	.sf_opt{
 		float: left;
@@ -43,6 +67,11 @@ body{
 	}
 	.sf_search{
 		background: url('/Content/images/main/search.png') no-repeat center;
+  		background-size: 17px 17px;
+  		height: 38px;
+	}
+	.sf_cart{
+		background: url('/Content/images/hd_cart.png') no-repeat center;
   		background-size: 17px 17px;
   		height: 38px;
 	}
@@ -392,9 +421,102 @@ body{
 
 /* emptycart.html */
 .sf-hd{
-	.sf_back{
+	.hd_cart{
 		background: none;
 	}
+}
+.cart_list{
+	background: #ffffff;
+	.cart_item{
+		padding:14px 0 15px 10px;
+		border-bottom: 1px solid #dfdfdf;
+		.cart_choose{
+			float: left;
+			width:30px;
+			input[type="checkbox"]{
+				display: none;
+			}
+			label{
+				display: inline-block;
+				height: 60px;
+				width: 100%;
+				background:url("/Content/images/order/red_unselect.png") no-repeat 0 center;
+				background-size:18px 18px;
+			}
+			label.checked{
+				background:url("/Content/images/order/red_select.png") no-repeat 0 center;
+				background-size:18px 18px;
+			}
+		}
+		.cart_pic{
+			width:19%;
+			float: left;
+			img{
+				width: 100%;
+			}
+		}
+		.cart_des{
+			float: left;
+			margin-left: 2%;
+			width: 44%;
+			.ct_name{
+				margin-bottom: 12px;
+			}
+			.ct_size{
+				color:#A9A9A9;
+			}
+		}
+		.edit_des{
+			float: left;
+			margin-left: 2%;
+			width: 65%;
+			.ct_name{
+				margin-bottom: 12px;
+			}
+			.ed_amount{
+				height: 32px;
+				width: 120px;
+				border: 1px solid #dfdfdf;
+				.ed_minus{
+					float: left;
+					display:inline-block;
+					width:34px;
+					line-height: 32px;
+					text-align: center;
+					border-right: 1px solid #dfdfdf;
+				}
+				.ed_num{
+					float: left;
+					display: inline-block;
+					width: 49px;
+					line-height: 32px;
+					text-align: center;
+					border-right: 1px solid #dfdfdf;
+				}
+				.ed_plus{
+					float: left;
+					display: inline-block;
+					width: 34px;
+					line-height: 32px;
+					text-align: center;
+				}
+			}
+		}
+		.cart_price{
+			float: right;
+			text-align: right;
+			.origin_price{
+				text-decoration: line-through;
+			}
+			.ct_num{
+				margin-top: 15px;
+				color:#A9A9A9;
+			}
+		}
+	}
+}
+.ct_btm{
+	height: 100px;
 }
 .ep_notice{
 	height: 224px;
@@ -421,4 +543,195 @@ body{
 	background: #0396e4;
 	color: #ffffff;
 	border-radius: 3px;
+}
+.ep_bottom{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background: #ffffff;
+	.ep_total{
+		width: 100%
+		height: 42px;
+		line-height: 42px;
+		input[type="radio"]{
+			display: none;
+		}
+		label{
+			padding-left: 32px;
+			display: inline-block;
+			cursor: pointer;
+			line-height: 42px;
+			background:url("/Content/images/order/red_unselect.png") no-repeat 10px 13px;
+			background-size:18px 18px;
+		}
+		label.checked{
+			background:url("/Content/images/order/red_select.png") no-repeat 10px 13px;
+			background-size:18px 18px;
+		}
+		.total_amount{
+			position: absolute;
+			right: 35%;
+		}
+		.btn_checkout{
+			height: 42px;
+			width: 33%;
+			position: absolute;
+			right: 0;
+			background: #0396e4;
+			color:#ffffff;
+
+		}
+		.btn_del{
+			height: 42px;
+			width: 33%;
+			position: absolute;
+			right: 0;
+			background: #e61d27;
+			color:#ffffff;
+		}
+
+	}
+}
+.menu_bottom{
+	height: 45px;
+	border-top: 1px solid #dfdfdf;
+	.bottom_opt{
+		display: inline-block;
+		width: 20%;
+		height: 15px;
+		float: left;
+		text-align: center;
+		padding-top: 30px;
+	}
+	.bottom_main{
+		background:url("/Content/images/main/main_02.png") no-repeat center 8px;
+		background-size:18px 18px;
+	}
+	.bottom_cata{
+		background:url("/Content/images/main/cata_02.png") no-repeat center 8px;
+		background-size:18px 18px;
+	}
+	.bottom_cart{
+		background:url("/Content/images/main/cart_01.png") no-repeat center 8px;
+		background-size:18px 18px;
+	}
+	.bottom_mine{
+		background:url("/Content/images/main/mine_02.png") no-repeat center 8px;
+		background-size:18px 18px;
+	}
+	.bottom_more{
+		background:url("/Content/images/main/more_02.png") no-repeat center 14px;
+		background-size:27px 7px;
+	}
+}
+
+/*product*/
+.product-bottom{
+	height: 43px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	.btn_cart{
+		float: left;
+		height:100%;
+		width:50%;
+		background:  #e61d27;
+		color: #ffffff;
+	}
+	.btn_buy{
+		float: left;
+		height:100%;
+		width:50%;
+		background: #0396e4;
+		color: #ffffff;
+	}
+}
+
+.pd_banner{
+	img{
+		width: 100%;
+	}
+}
+.pd_detail{
+	.d_title{
+		height: 32px;
+		padding-left: 8%;
+		background: #0396e4;
+		color:#ffffff;
+		.d_line{
+			display: inline-block;
+			height: 16px;
+			width: 20%;
+			border-bottom: 1px solid #ffffff;
+		}
+		.d_text{
+			display: inline-block;
+			line-height: 32px;
+			margin: 0 16%;
+		}
+	}
+	.d_pic{
+		img{
+			width: 100%;
+		}
+	}
+	.d_bottom{
+		margin-bottom: 43px;
+	}
+}
+
+/*评论页*/
+.cmt_overall{
+	padding-left: 10px;
+	height: 49px;
+	line-height: 49px;
+	border-bottom: 1px solid #dfdfdf;
+	.cmt_total{
+		margin-left: 6%;
+	}
+
+}
+.cmt_detail{
+	padding:12px 12px 15px 15px;
+	border-bottom: 1px solid #dfdfdf;
+	.cmt_date{
+		float: right;
+	}
+	.cmt_text{
+		margin: 12px 10px 0 0;
+		line-height: 18px;
+	}
+	.cmt_good{
+		display: inline-block;
+		margin-top: 12px;
+		padding-left: 12px;
+		background:url("/Content/images/good.png") no-repeat 0 1px;
+		background-size:9px 11px;
+	}
+	.cmt_avg{
+		display: inline-block;
+		margin-top: 12px;
+		padding-left: 12px;
+		background:url("/Content/images/avg.png") no-repeat 0 1px;
+		background-size:9px 11px;
+	}
+	.cmt_bad{
+		display: inline-block;
+		margin-top: 12px;
+		padding-left: 12px;
+		background:url("/Content/images/bad.png") no-repeat 0 1px;
+		background-size:9px 11px;
+	}
+}
+.cmt_bottom{
+	height: 43px;
+}
+
+/*产品信息页*/
+.pinfo-bd{
+	padding-top: 9px;
+	p{
+		line-height: 30px;
+		margin-left: 18px;
+	}
 }
