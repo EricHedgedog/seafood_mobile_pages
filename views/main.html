@@ -10,8 +10,7 @@
     <meta name="format-detection" content="telephone=no" /> 
     <link rel="stylesheet" type="text/css" href="/Content/css/css-reset.css">
     <link rel="stylesheet" type="text/css" href="/Content/css/sf-mobile.css">
-    <script type="text/javascript" src="/Scripts/jquery-1.9.1/jquery.js"></script>
-    <script type="text/javascript" src="/Scripts/jquery.SuperSlide.2.1.1.js"></script>
+
 </head>
 <body>
 	<div class="sf-hd clearfix">
@@ -21,25 +20,18 @@
 	</div>
 
 	<div class="main-bd">
-		<div class="main-slider">
-			<div class="img-wrap">
-				<ul class="img_slider">
-					<li><a href=""><img src='/Content/images/main/banner_01.jpg' alt="1"></a></li>
-					<li><a href=""><img src='/Content/images/main/banner_01.jpg' alt="1"></a></li>
-					<li><a href=""><img src='/Content/images/main/banner_01.jpg' alt="2"></a></li>
-					<li><a href=""><img src='/Content/images/main/banner_01.jpg' alt="3"></a></li>
-					<li><a href=""><img src='/Content/images/main/banner_01.jpg' alt="4"></a></li>
-					<li><a href=""><img src='/Content/images/main/banner_01.jpg' alt="4"></a></li>
-				</ul>
+		<div class="swiper-container">
+			<div class="swiper-wrapper clearfix">
+				<div class="swiper-slide"><img src='/Content/images/main/banner_01.jpg' alt="1"><div>
+				<div class="swiper-slide"><img src='/Content/images/main/banner_01.jpg' alt="2"><div>
+				<div class="swiper-slide"><img src='/Content/images/main/banner_01.jpg' alt="3"><div>
+				<div class="swiper-slide"><img src='/Content/images/main/banner_01.jpg' alt="4"><div>
+
 			</div>
 
-			<div class="slider_dot">
-				<span class=""></span>
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
+			<div class="swiper-paagination"></div>
 		</div>
+
 		<div class="main-opts">
 			<a class="opts opt01" href="">购物车</a>
 			<a class="opts opt02" href="">请求信息</a>
@@ -48,18 +40,18 @@
 			<a class="opts opt05" href="">全部分类</a>
 		</div>
 
-		<div class="main-limit">
-			<div class="time_limit">
-				<span>限时秒杀</span>
-				<span>剩余<em>15:35:36</em>结束</span>
+		<div class="main-limit clearfix">
+			<div class="deal_limit">
+				<span class="limit_text">限时秒杀</span>
+				<span class="time_limit">剩余<span class="c_red">15:35:36</span>结束</span>
 			</div>
-			<div><img src='/Content/images/main/pic_02.jpg'></div>
-			<div><img src='/Content/images/main/pic03.jpg'></div>
+			<div class="deal_pic01"><img src='/Content/images/main/pic_02.jpg'></div>
+			<div class="deal_pic02"><img src='/Content/images/main/pic03.jpg'></div>
 		</div>
 
 		<div class="main-fresh">
-			<div>新鲜入库</div>
-			<div>
+			<div class="fresh_title">新鲜入库</div>
+			<div class="fresh_des">
 				<p>阿根廷红虾L1大号4斤 海捕大虾</p>
 				<p>来自阿根廷的美味</p>
 				<img src='/Content/images/main/pic05.jpg'>
