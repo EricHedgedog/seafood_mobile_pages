@@ -8,32 +8,61 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minmum-scale=1.0" />
     <meta name="format-detection" content="telephone=no" /> 
-    <link rel="stylesheet" type="text/css" href="/Content/css/css-reset.css">
-    <link rel="stylesheet" type="text/css" href="/Content/css/sf-mobile.css">
+    <link rel="stylesheet" type="text/css" href="../Content/css/css-reset.css">
+    <link rel="stylesheet" type="text/css" href="../Content/css/sf-mobile.css">
 </head>
 <body>
 	<div class="sf-hd clearfix">
 		<a class="sf_back" href="#"></a>
 		<span class="hd_text"><b>登录</b></span>
-        <a class="sf_opt" href="">注册</a>
+        <a class="sf_opt" href="register.html">注册</a>
 	</div>
 
     <div class="lg-bd">
         <form method="post" action="">
             <div class="lg_user">
-                <input type="text" class="lg_username" placeholder="用户名"/>
+                <input type="text" class="lg_username" id="lg_username" placeholder="用户名" required/>
             </div>
             <div class="lg_user">
-                <input type="password" class="lg_pass" placeholder="输入密码" />
+                <input type="password" class="lg_pass" id="lg_pass" placeholder="输入密码" required />
                 <span class="show_pass"></span>
             </div>
             <div class="lg_opt">
-                <input type="radio" id="auto_login" name="" value="1">
-                <label for="agreement"><span class=""></span>自动登录</label>
+                <input type="radio" id="auto_login" name="lg_auto" value="">
+                <label for="auto_login" name="auto_login"><span class=""></span>自动登录</label>
                 <a class="fgt_pass" href="#">忘记密码？</a>
             </div>
-            <button class="lg_btn"><b>登录</b></button>
+            <button class="lg_btn" type="submit"><b>登录</b></button>
         </form>
     </div>
+    <script type="text/javascript" src="../Scripts/lib/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+      $('.lg_opt label').click(function(){
+        var radioId = $(this).attr('name');
+        console.log(radioId);
+        var radioIcon = $(this).find('span');
+        $('label').toggleClass('checked');
+        radioIcon.toggleClass("checked");
+        if(radioIcon.hasClass('checked')){
+            $('#' + radioId).attr('checked', 'checked');
+        }
+        else{
+            $('#' + radioId).removeAttr('checked')
+        }
+      });
+    }); 
+
+    $(function(){
+        $('.show_pass').click(function(){
+           if ($("#lg_pass").attr("type") == "password") {
+            $("#lg_pass").attr("type", "text")
+            }
+            else {
+            $("#lg_pass").attr("type", "password")
+            }
+        })
+    })
+    </script>
 </body>
 </html>

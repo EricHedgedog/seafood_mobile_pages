@@ -8,14 +8,12 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minmum-scale=1.0" />
     <meta name="format-detection" content="telephone=no" /> 
-    <link rel="stylesheet" type="text/css" href="/Content/css/css-reset.css">
-    <link rel="stylesheet" type="text/css" href="/Content/css/sf-mobile.css">
-    <script type="text/javascript" src="/Scripts/jquery-1.9.1/jquery.js"></script>
-    <script type="text/javascript" src="/Scripts/jquery.SuperSlide.2.1.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../Content/css/css-reset.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/css/sf-mobile.css">
 </head>
 <body>
 	<div class="sf-hd clearfix">
-		<a class="sf_back" href="#"></a>
+		<a class="sf_back" href="address.html"></a>
 		<span class="hd_text"><b>新建收货地址</b></span>
         <a class="sf_opt" href="">保存</a>
 	</div>
@@ -37,9 +35,24 @@
             <input type="text" id="detail_add" placeholder="详细地址" required/>
         </div>
         <div class="na_default na_all">
-            <label class="c_grey checked">设为默认</label>
-            <input type="radio" checked="checked">
+            <label class="c_grey checked" name="radio-default">设为默认</label>
+            <input type="radio" checked="checked" name="radio-address" id="radio-default">
         </div>
     </div>
+    <script type="text/javascript" src="../../Scripts/lib/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+      $('label').click(function(){
+        var radioId = $(this).attr('name');
+        $('label').toggleClass('checked');
+        if ($('#radio-default').attr('checked') == 'checked') {
+            $('#radio-default').removeAttr("checked")
+            }
+            else {
+            $('#radio-default').attr('checked', 'checked')
+            }
+      });
+    }); 
+    </script>
 </body>
 </html>

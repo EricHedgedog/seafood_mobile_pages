@@ -8,10 +8,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minmum-scale=1.0" />
     <meta name="format-detection" content="telephone=no" /> 
-    <link rel="stylesheet" type="text/css" href="/Content/css/css-reset.css">
-    <link rel="stylesheet" type="text/css" href="/Content/css/sf-mobile.css">
-    <script type="text/javascript" src="/Scripts/jquery-1.9.1/jquery.js"></script>
-    <script type="text/javascript" src="/Scripts/jquery.SuperSlide.2.1.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../Content/css/css-reset.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/css/sf-mobile.css">
 </head>
 <body>
     <div class="sf-hd clearfix">
@@ -39,7 +37,7 @@
             <p class="cf_titles">商品信息</p>
             <div class="cf_item clearfix">
                 <div class="cf_pic">
-                    <img src='/Content/images/main/pic09.jpg'>
+                    <img src='../../Content/images/main/pic09.jpg'>
                 </div>
                 <div class="cf_des">
                     <p class="cf_name">阿根廷红虾L1大号4斤 海捕大虾</p>
@@ -52,7 +50,7 @@
             </div>
             <div class="cf_item clearfix">
                 <div class="cf_pic">
-                    <img src='/Content/images/main/pic09.jpg'>
+                    <img src='../../Content/images/main/pic09.jpg'>
                 </div>
                 <div class="cf_des">
                     <p class="cf_name">阿根廷红虾L1大号4斤 海捕大虾</p>
@@ -71,15 +69,15 @@
         <div class="cf_paymethod">
             <p class="cf_titles">支付方式：</p>
             <p class="pay_opts pay_zhifubao">
-                <label class="checked">支付宝</label>
-                <input type="radio" class="selected" id="alipay" name="payment" value="">
+                <label for="alipay"class="checked" name="alipay">支付宝</label>
+                <input type="radio" class="selected" id="alipay" name="payment" checked="checked" value="">
             </p>
             <p class="pay_opts pay_weixin">
-                <label>微信支付</label>
+                <label for="wechat" name=wechat>微信支付</label>
                 <input type="radio" class="" id="wechat" name="payment" value="">
             </p>
             <p class="pay_opts pay_yinlian">
-                <label>银联支付</label>
+                <label for="upcash" name="upcash">银联支付</label>
                 <input type="radio" class="" id="upcash" name="payment" value="">
             </p>
         </div>
@@ -101,5 +99,17 @@
             <button class="cfm_btn">结算（5）</button>
         </div>
     </div>
+    <script type="text/javascript" src="../../Scripts/lib/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+      $('.cf_paymethod label').click(function(){
+        var radioId = $(this).attr('name');
+        $('label').removeClass('checked');
+        $(this).attr('class', 'checked');
+        $('input[type="radio"]').removeAttr('checked');
+        $('#' + radioId).attr('checked', 'checked');
+      });
+    }); 
+    </script>
 </body>
 </html>

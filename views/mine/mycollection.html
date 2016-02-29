@@ -8,25 +8,24 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minmum-scale=1.0" />
     <meta name="format-detection" content="telephone=no" /> 
-    <link rel="stylesheet" type="text/css" href="/Content/css/css-reset.css">
-    <link rel="stylesheet" type="text/css" href="/Content/css/sf-mobile.css">
-    <script type="text/javascript" src="/Scripts/jquery-1.9.1/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../Content/css/css-reset.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/css/sf-mobile.css">
 </head>
 <body>
 	<div class="sf-hd clearfix">
 		<a class="sf_back" href="#"></a>
 		<span class="hd_text"><b>我的收藏</b></span>
-        <a class="sf_opt" href="">编辑</a>
+        <a class="sf_opt sf_edit" href="javascript:;">编辑</a>
 	</div>
 
     <div class="collect_bd clearfix">
         <div class="clt_item">
             <div class="clt_choose">
-                <input type="checkbox">
-                <label class="checked"></label>
+                <input type="checkbox" name="clt_check" id="" value="">
+                <label class=""></label>
             </div>
             <div class="clt_pic">
-                <img src="/Content/images/main/pic08.jpg">
+                <img src="../../Content/images/main/pic08.jpg">
             </div>
             <div class="clt_name">
                 <a href="">特技大螃蟹3斤装</a>
@@ -39,11 +38,11 @@
 
         <div class="clt_item">
             <div class="clt_choose">
-                <input type="checkbox">
-                <label class="checked"></label>
+                <input type="checkbox" name="clt_check" id="" value="">
+                <label class=""></label>
             </div>
             <div class="clt_pic">
-                <img src="/Content/images/main/pic08.jpg">
+                <img src="../../Content/images/main/pic08.jpg">
             </div>
             <div class="clt_name">
                 <a href="">特技大螃蟹3斤装</a>
@@ -56,11 +55,11 @@
 
         <div class="clt_item">
             <div class="clt_choose">
-                <input type="checkbox">
-                <label class="checked"></label>
+                <input type="checkbox" name="clt_check" id="checkbox" value="">
+                <label class=""></label>
             </div>
             <div class="clt_pic">
-                <img src="/Content/images/main/pic08.jpg">
+                <img src="../../Content/images/main/pic08.jpg">
             </div>
             <div class="clt_name">
                 <a href="">特技大螃蟹3斤装</a>
@@ -73,11 +72,11 @@
 
         <div class="clt_item">
             <div class="clt_choose">
-                <input type="checkbox">
-                <label class="checked"></label>
+                <input type="checkbox" name="clt_check" id="" value="">
+                <label class=""></label>
             </div>
             <div class="clt_pic">
-                <img src="/Content/images/main/pic08.jpg">
+                <img src="../../Content/images/main/pic08.jpg">
             </div>
             <div class="clt_name">
                 <a href="">特技大螃蟹3斤装</a>
@@ -90,11 +89,11 @@
 
         <div class="clt_item">
             <div class="clt_choose">
-                <input type="checkbox">
-                <label class="checked"></label>
+                <input type="checkbox" name="clt_check" id="" value="">
+                <label for="" class="" name=""></label>
             </div>
             <div class="clt_pic">
-                <img src="/Content/images/main/pic08.jpg">
+                <img src="../../Content/images/main/pic08.jpg">
             </div>
             <div class="clt_name">
                 <a href="">特技大螃蟹3斤装</a>
@@ -105,13 +104,69 @@
             </div>
         </div>
 
-        <div>
-            <div>
-                <text type="radio" />
-                <label>全选</label>
-                <button class="btn_del">删除</button>
+        <div class="collection_bottom clear"></div>
+        <div class="ep_bottom">
+            <div class="ep_total">
+                <input type="radio" name="" id="checkAll" />
+                <label class="" name="checkAll" id="">全选</label>
+                <button type="submit" class="btn_del">删除</button>
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="../../Scripts/lib/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript">
+    /*全选*/
+    $(function() {
+      $('.ep_total label').click(function(){
+        var radioId = $(this).attr('name');
+        $(this).toggleClass('checked');
+        if($(this).hasClass('checked')){
+            $('#' + radioId).attr('checked', 'checked');
+            $('.clt_choose label').addClass('checked');
+            $("[name='clt_check']").attr('checked', 'true');
+        }
+        else{
+            $('#' + radioId).removeAttr('checked');
+            $('.clt_choose label').removeClass('checked');
+            $("[name='clt_check']").removeAttr('checked');
+        }
+      });
+    }); 
+
+    /*checkbox*/
+    $(function() {
+      $('.clt_choose label').click(function(){
+        $(this).toggleClass('checked');
+        if($(this).hasClass('checked')){
+            $(this).prev().attr('checked', 'true');
+        }
+        else{
+            $(this).removeClass('checked');
+            $(this).prev().removeAttr('checked');
+        }
+      });
+    });
+
+    /*右上编辑按钮*/
+    $(function(){
+        $('.sf_edit').click(function(){
+            if($(this).text() == '编辑'){
+                $(this).text('完成');
+                $('.ep_bottom').show();
+                $('.collection_bottom').show();
+                $('.clt_choose').show();
+                
+            }
+            else{
+                $(this).text('编辑');
+                $('.ep_bottom').hide();
+                $('.clt_choose').hide();
+                $('.collection_bottom').hide();
+                
+            }
+
+        })
+    })
+    </script>
 </body>
 </html>

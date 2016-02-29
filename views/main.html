@@ -8,8 +8,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minmum-scale=1.0" />
     <meta name="format-detection" content="telephone=no" /> 
-    <link rel="stylesheet" type="text/css" href="/Content/css/css-reset.css">
-    <link rel="stylesheet" type="text/css" href="/Content/css/sf-mobile.css">
+    <link rel="stylesheet" type="text/css" href="../Content/css/css-reset.css">
+    <link rel="stylesheet" type="text/css" href="../Content/css/sf-mobile.css">
+    <link rel="stylesheet" type="text/css" href="../Scripts/lib/swiper-3.3.1.min.css"/>
 
 </head>
 <body>
@@ -20,20 +21,19 @@
 	</div>
 
 	<div class="main-bd">
-		<div class="swiper-container">
-			<div class="swiper-wrapper clearfix">
-				<div class="swiper-slide"><img src='/Content/images/main/banner_01.jpg' alt="1"><div>
-				<div class="swiper-slide"><img src='/Content/images/main/banner_01.jpg' alt="2"><div>
-				<div class="swiper-slide"><img src='/Content/images/main/banner_01.jpg' alt="3"><div>
-				<div class="swiper-slide"><img src='/Content/images/main/banner_01.jpg' alt="4"><div>
-
-			</div>
-
-			<div class="swiper-paagination"></div>
-		</div>
+	    <div class="swiper-container">
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide"><img src='../Content/images/main/banner_01.jpg' alt="1"/></div>
+	            <div class="swiper-slide"><img src='../Content/images/main/banner_01.jpg' alt="2"/></div>
+	            <div class="swiper-slide"><img src='../Content/images/main/banner_01.jpg' alt="3"/></div>
+	        </div>
+	        <!-- 如果需要分页器 -->
+	        <div class="swiper-pagination"></div>
+	        
+	    </div>
 
 		<div class="main-opts">
-			<a class="opts opt01" href="">购物车</a>
+			<a class="opts opt01" href="shoppingCart/shoppingcart.html">购物车</a>
 			<a class="opts opt02" href="">请求信息</a>
 			<a class="opts opt03" href="">团购活动</a>
 			<a class="opts opt04" href="">商家列表</a>
@@ -45,81 +45,228 @@
 				<span class="limit_text">限时秒杀</span>
 				<span class="time_limit">剩余<span class="c_red">15:35:36</span>结束</span>
 			</div>
-			<div class="deal_pic01"><img src='/Content/images/main/pic_02.jpg'></div>
-			<div class="deal_pic02"><img src='/Content/images/main/pic03.jpg'></div>
+			<div class="deal_pic01"><img src='../Content/images/main/pic_02.jpg'></div>
+			<div class="deal_pic02"><img src='../Content/images/main/pic03.jpg'></div>
 		</div>
 
-		<div class="main-fresh">
+		<div class="main-fresh clearfix">
 			<div class="fresh_title">新鲜入库</div>
-			<div class="fresh_des">
-				<p>阿根廷红虾L1大号4斤 海捕大虾</p>
-				<p>来自阿根廷的美味</p>
-				<img src='/Content/images/main/pic05.jpg'>
+			<div class="fr_left">
+
+				<img src='../Content/images/main/deal01.jpg'>
 			</div>
-			<div>
-				<div>
-					<img src='/Content/images/main/pic04.png'>
+			<div class="fr_right">
+				<div class="r_top clearfix">
+					<img src='../Content/images/main/deal02.jpg'>
 				</div>
-				<div>
-					<div><img src='/Content/images/main/pic06.jpg'></div>
-					<div><img src='/Content/images/main/pic07.jpg'></div>
+				<div class="r_bottom">
+					<div><img src='../Content/images/main/deal03.jpg'></div>
+					<div><img src='../Content/images/main/deal04.jpg'></div>
 				</div>
 			</div>
 		</div>
 
 		<div class="main-banner">
-			<img src='/Content/images/main/banner_02.jpg'>
+			<img src='../Content/images/main/banner_02.jpg'>
 		</div>
 
 		<div class="main-parts">
-			<div>海鲜水产
-				<a>更多&gt;</a>
+			<div class="fresh_title">海鲜水产
+				<a class="c_red main_more">更多</a>
 			</div>
-			<div>
-				<a href=""><img src="">
-					<p></p>
-					<p> <span></span></p>
+			<div class="main-product clearfix">
+				<a class="main_item" href=""><img src="../Content/images/main/pic08.jpg">
+					<p>阿拉斯加帝王蟹</p>
+					<
+						<span class="c_red">¥ 120.00</span>
+					</p>
 				</a>
-				<a href=""><img src="">
-					<p></p>
-					<p> <span></span></p>
+				<a class="main_item" href=""><img src="../Content/images/main/pic09.jpg">
+					<p>斯加帝王蟹</p>
+					<p>
+						<span class="c_red">¥ 120.00</span>
+					</p>
 				</a>
-				<a href=""><img src="">
-					<p></p>
-					<p> <span></span></p>
+				<a class="main_item" href=""><img src="../Content/images/main/pic10.jpg">
+					<p>斯加帝王蟹</p>
+					<p>
+						<span class="c_red">¥ 120.00</span>
+					</p>
 				</a>
-				<a href=""><img src="">
-					<p></p>
-					<p> <span></span></p>
+				<a class="main_item" href=""><img src="../Content/images/main/pic11.jpg">
+					<p>斯加帝王蟹</p>
+					<p>
+						<span class="c_red">¥ 120.00</span>
+					</p>
 				</a>
 			</div>
 		</div>
 
-		<div class="main-banner"></div>
+		<div class="main-banner">
+			<img src='../Content/images/main/banner_03.jpg'>
+		</div>
 
 		<div class="main-parts">
-			<div>海鲜水产
-				<a>更多&gt;</a>
+			<div class="fresh_title">鲍鱼专区
+				<a class="c_red">更多</a>
 			</div>
-			<div></div>
+			<div class="main-product clearfix">
+				<a class="main_item" href=""><img src="../Content/images/main/pic08.jpg">
+					<p>斯加帝王蟹</p>
+					<p>
+						<span class="c_red">¥ 120.00</span>
+					</p>
+				</a>
+				<a class="main_item" href=""><img src="../Content/images/main/pic09.jpg">
+					<p>斯加帝王蟹</p>
+					<p>
+						<span class="c_red">¥ 120.00</span>
+					</p>
+				</a>
+				<a class="main_item" href=""><img src="../Content/images/main/pic10.jpg">
+					<p>斯加帝王蟹</p>
+					<p>
+						<span class="c_red">¥ 120.00</span>
+					</p>
+				</a>
+				<a class="main_item" href=""><img src="../Content/images/main/pic11.jpg">
+					<p>斯加帝王蟹</p>
+					<p>
+						<span class="c_red">¥ 120.00</span>
+					</p>
+				</a>
+			</div>
 		</div>
 
-
-
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-
-		<div class="main-bottom">
-			<a href="">首页</a>
-			<a href="">分类</a>
-			<a href="">购物车</a>
-			<a href="">我的</a>
-			<a href="">更多</a>
+		<div class="main-banner">
+			<img src='../Content/images/main/banner_02.jpg'>
 		</div>
+
+		<div class="main-parts">
+			<div class="fresh_title">加工水产
+				<a class="c_red">更多</a>
+			</div>
+			<div class="main-product clearfix">
+				<a class="main_item" href=""><img src="../Content/images/main/pic08.jpg">
+					<p>斯加帝王蟹</p>
+					<p>
+						<span class="c_red">¥ 120.00</span>
+					</p>
+				</a>
+				<a class="main_item" href=""><img src="../Content/images/main/pic09.jpg">
+					<p>斯加帝王蟹</p>
+					<p>
+						<span class="c_red">¥ 120.00</span>
+					</p>
+				</a>
+				<a class="main_item" href=""><img src="../Content/images/main/pic10.jpg">
+					<p>斯加帝王蟹</p>
+					<p>
+						<span class="c_red">¥ 120.00</span>
+					</p>
+				</a>
+				<a class="main_item" href=""><img src="../Content/images/main/pic11.jpg">
+					<p>斯加帝王蟹</p>
+					<p>
+						<span class="c_red">¥ 120.00</span>
+					</p>
+				</a>
+			</div>
+		</div>
+
+		<div class="main-banner">
+			<img src='../Content/images/main/banner_03.jpg'>
+		</div>
+
+		<div class="main-parts">
+			<div class="fresh_title">即食海鲜
+				<a class="c_red">更多</a>
+			</div>
+			<div class="main-product clearfix">
+				<a class="main_item" href=""><img src="../Content/images/main/pic08.jpg">
+					<p>斯加帝王蟹</p>
+					<p>
+						<span class="c_red">¥ 120.00</span>
+					</p>
+				</a>
+				<a class="main_item" href=""><img src="../Content/images/main/pic09.jpg">
+					<p>斯加帝王蟹</p>
+					<p>
+						<span class="c_red">¥ 120.00</span>
+					</p>
+				</a>
+				<a class="main_item" href=""><img src="../Content/images/main/pic10.jpg">
+					<p>斯加帝王蟹</p>
+					<p>
+						<span class="c_red">¥ 120.00</span>
+					</p>
+				</a>
+				<a class="main_item" href=""><img src="../Content/images/main/pic11.jpg">
+					<p>斯加帝王蟹</p>
+					<p>
+						<span class="c_red">¥ 120.00</span>
+					</p>
+				</a>
+			</div>
+		</div>
+
+		<div class="main-banner">
+			<img src='../Content/images/main/banner_02.jpg'>
+		</div>
+
+		<div class="main-parts">
+			<div class="fresh_title">礼盒礼券
+				<a class="c_red">更多</a>
+			</div>
+			<div class="main-product clearfix">
+				<a class="main_item" href=""><img src="../Content/images/main/pic08.jpg">
+					<p>斯加帝王蟹</p>
+					<p>
+						<span class="c_red">¥ 120.00</span>
+					</p>
+				</a>
+				<a class="main_item" href=""><img src="../Content/images/main/pic09.jpg">
+					<p>斯加帝王蟹</p>
+					<p>
+						<span class="c_red">¥ 120.00</span>
+					</p>
+				</a>
+				<a class="main_item" href=""><img src="../Content/images/main/pic10.jpg">
+					<p>斯加帝王蟹</p>
+					<p>
+						<span class="c_red">¥ 120.00</span>
+					</p>
+				</a>
+				<a class="main_item" href=""><img src="../Content/images/main/pic11.jpg">
+					<p>斯加帝王蟹</p>
+					<p>
+						<span class="c_red">¥ 120.00</span>
+					</p>
+				</a>
+			</div>
+		</div>
+		<div class="main-bottom"></div>
+
+        <div class="menu_bottom clearfix">
+            <a class="bottom_opt bottom_main c_grey" href="#">首页</a>
+            <a class="bottom_opt bottom_cata c_grey" href="">分类</a>
+            <a class="bottom_opt bottom_cart c_grey" href="shoppingCart/shoppingcart.html">购物车</a>
+            <a class="bottom_opt bottom_mine c_grey" href="mine/personal.html">我的</a>
+            <a class="bottom_opt bottom_more c_grey" href="">更多</a>
+        </div>
 	</div>
+  	<script type="text/javascript" src="../Scripts/lib/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="../Scripts/lib/swiper-3.3.1.jquery.min.js"></script>
+    <script>        
+	  var mySwiper = new Swiper ('.swiper-container', {
+	    direction: 'horizontal',
+	    loop: true,
+	    autoplay: 3000,
+	    
+	    // 如果需要分页器
+	    pagination: '.swiper-pagination',
+	    
+	  })        
+  	</script>
 </body>
 </html>

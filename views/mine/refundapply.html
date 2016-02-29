@@ -3,31 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>我的账户</title>
+    <title>申请退换货</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minmum-scale=1.0" />
     <meta name="format-detection" content="telephone=no" /> 
-    <link rel="stylesheet" type="text/css" href="/Content/css/css-reset.css">
-    <link rel="stylesheet" type="text/css" href="/Content/css/sf-mobile.css">
-    <script type="text/javascript" src="/Scripts/jquery-1.9.1/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../Content/css/css-reset.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/css/sf-mobile.css">
 </head>
 <body>
 	<div class="sf-hd clearfix">
 		<a class="sf_back" href="#"></a>
-		<span class="hd_text"><b>我的账户</b></span>
+		<span class="hd_text"><b>申请退换货</b></span>
         <a class="sf_opt" href="">保存</a>
 	</div>
 
-    <div class="mo_bd">
-        <div class="ps_menu">
-            <a class="m_head u_detail" href="">头像<span><span class="head_pic"></span></span></a>
-            <a class="m_name u_detail" href="">姓名<span class="c_grey">猪小妞</span></a>
-            <a class="m_sex u_detail" href="">性别<span class="c_grey">女</span></a>
-            <a class="m_birth u_detail" href="">生日<span class="c_grey">1990-01-01</span></a>
-            <a class="m_place u_detail" href="">详细地址<span class="c_grey">海虞镇周兴旺桥村通港路智周路</span></a>
-            <a class="m_zip u_detail" href="">邮编<span class="c_grey">215000</span></a>
-            <a class="m_mobile u_detail" href="">手机号<span class="c_grey">12312312323</span></a>
+    <div class="refund_bd">
+        <div class="rf_menu">
+            <div>会员名车：赤宵客</div>
+            <div>邮箱：456456@123.com</div>
+            <div class="rf_choose">
+                <select class="rf_select c_grey">
+                    <option value="" selected="selected">选择分类：</option>
+                    <option value="">海鲜</option>
+                    <option value="">礼品盒</option>
+                </select>
+            </div>
+            <div class="rf_choose">
+                <select class="rf_select c_grey">
+                    <option value="" selected="selected">选择退换理由：</option>
+                    <option value="">死的</option>
+                    <option value="">不新鲜</option>
+                </select>
+            </div>
+            <div class="">
+                <input type="text" class="rf_odnum" placeholder="订单号：" required/>
+            </div>
+            <div class="rf_product">
+                <a class="c_grey item_choose" href="">选择商品：</a>
+            </div>
+            <div class="rf_detail">
+                <textarea class="detail_text" placeholder="详细描述："></textarea>
+            </div>
+            <div class="c_grey rf_upload">
+                <p>上传图片：</p>
+                <span class="upload-img"><input id="file" accept="image/*" type="file" multiple="multiple"></span>
+            </div>
         </div>
 
     </div>

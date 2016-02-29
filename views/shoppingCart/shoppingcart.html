@@ -8,10 +8,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minmum-scale=1.0" />
     <meta name="format-detection" content="telephone=no" /> 
-    <link rel="stylesheet" type="text/css" href="/Content/css/css-reset.css">
-    <link rel="stylesheet" type="text/css" href="/Content/css/sf-mobile.css">
-    <script type="text/javascript" src="/Scripts/jquery-1.9.1/jquery.js"></script>
-    <script type="text/javascript" src="/Scripts/jquery.SuperSlide.2.1.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../Content/css/css-reset.css">
+    <link rel="stylesheet" type="text/css" href="../../Content/css/sf-mobile.css">
 </head>
 <body>
     <div class="sf-hd clearfix">
@@ -24,11 +22,30 @@
         <div class="cart_list">
             <div class="cart_item clearfix">
                 <div class="cart_choose">
-                    <input type="checkbox" class="" />
+                    <input type="checkbox" class="" name="cart_check" />
                     <label></label>
                 </div>
                 <div class="cart_pic">
-                    <img src='/Content/images/main/pic09.jpg'>
+                    <img src='../../Content/images/main/pic09.jpg'>
+                </div>
+                <div class="cart_des">
+                    <p class="ct_name">阿根廷红虾L1大号4斤 海捕大虾</p>
+                    <!-- <p class="ct_size">规格：3KG</p> -->
+                </div>
+                <div class="cart_price">
+                    <p class="c_red">¥ 9.80</p>
+                    <p class="c_grey origin_price">¥ 11.80</p>
+                    <p class="ct_num">x2</p>
+                </div>
+            </div>
+            <!-- repeat -->
+           <div class="cart_item clearfix">
+                <div class="cart_choose">
+                    <input type="checkbox" class="" name="cart_check" />
+                    <label></label>
+                </div>
+                <div class="cart_pic">
+                    <img src='../../Content/images/main/pic09.jpg'>
                 </div>
                 <div class="cart_des">
                     <p class="ct_name">阿根廷红虾L1大号4斤 海捕大虾</p>
@@ -43,11 +60,11 @@
             <!-- repeat -->
            <div class="cart_item clearfix">
                 <div class="cart_choose">
-                    <input type="checkbox" class="" />
+                    <input type="checkbox" class="" name="cart_check"  />
                     <label></label>
                 </div>
                 <div class="cart_pic">
-                    <img src='/Content/images/main/pic09.jpg'>
+                    <img src='../../Content/images/main/pic09.jpg'>
                 </div>
                 <div class="cart_des">
                     <p class="ct_name">阿根廷红虾L1大号4斤 海捕大虾</p>
@@ -62,11 +79,11 @@
             <!-- repeat -->
            <div class="cart_item clearfix">
                 <div class="cart_choose">
-                    <input type="checkbox" class="" />
+                    <input type="checkbox" class="" name="cart_check" />
                     <label></label>
                 </div>
                 <div class="cart_pic">
-                    <img src='/Content/images/main/pic09.jpg'>
+                    <img src='../../Content/images/main/pic09.jpg'>
                 </div>
                 <div class="cart_des">
                     <p class="ct_name">阿根廷红虾L1大号4斤 海捕大虾</p>
@@ -81,30 +98,11 @@
             <!-- repeat -->
            <div class="cart_item clearfix">
                 <div class="cart_choose">
-                    <input type="checkbox" class="" />
+                    <input type="checkbox" class="" name="cart_check" id="" />
                     <label></label>
                 </div>
                 <div class="cart_pic">
-                    <img src='/Content/images/main/pic09.jpg'>
-                </div>
-                <div class="cart_des">
-                    <p class="ct_name">阿根廷红虾L1大号4斤 海捕大虾</p>
-                    <p class="ct_size">规格：3KG</p>
-                </div>
-                <div class="cart_price">
-                    <p class="c_red">¥ 9.80</p>
-                    <p class="c_grey origin_price">¥ 11.80</p>
-                    <p class="ct_num">x2</p>
-                </div>
-            </div>
-            <!-- repeat -->
-           <div class="cart_item clearfix">
-                <div class="cart_choose">
-                    <input type="checkbox" class="" />
-                    <label></label>
-                </div>
-                <div class="cart_pic">
-                    <img src='/Content/images/main/pic09.jpg'>
+                    <img src='../../Content/images/main/pic09.jpg'>
                 </div>
                 <div class="cart_des">
                     <p class="ct_name">阿根廷红虾L1大号4斤 海捕大虾</p>
@@ -121,20 +119,15 @@
 
 
     	<div class="ep_bottom">
-	    	<div class="ep_total">
-	    		<input type="radio" />
-	    		<label class="checked">全选</label>
+	    	<div class="ep_total cart_all">
+	    		<input type="radio" name="" id="checkAll" />
+	    		<label class="" name="checkAll">全选</label>
 	    		<span class="total_amount c_red">合计：¥ 398.00</span>
 	    		<button type="submit" class="btn_checkout">结算（5）</button>
 	    	</div>
-	    	<div class="menu_bottom clearfix">
-	    		<a class="bottom_opt bottom_main c_grey" href="">首页</a>
-	    		<a class="bottom_opt bottom_cata c_grey" href="">分类</a>
-	    		<a class="bottom_opt bottom_cart c_grey" href="">购物车</a>
-	    		<a class="bottom_opt bottom_mine c_grey" href="">我的</a>
-	    		<a class="bottom_opt bottom_more c_grey" href="">更多</a>
-	    	</div>
     	</div>
     </div>
+    <script type="text/javascript" src="../../Scripts/lib/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/shoppingcart.js"></script>
 </body>
 </html>
