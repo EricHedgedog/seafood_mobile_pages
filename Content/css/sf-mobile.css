@@ -877,12 +877,11 @@ body {
 .p-bd div {
   background: #ffffff;
 }
-.p-bd .swiper-container {
-  width: 190px;
-  height: 190px;
-}
 .p-bd .swiper-container .swiper-wrapper .swiper-slide img {
   width: 100%;
+}
+.p-bd .swiper-container .swiper-pagination {
+  opacity: 0.5;
 }
 .p-des {
   height: 80px;
@@ -1450,6 +1449,9 @@ body {
 .rf_menu .rf_upload {
   padding-bottom: 23px;
 }
+.rf_menu .rf_upload div {
+  display: none;
+}
 .rf_menu .rf_upload .upload-img {
   display: block;
   width: 50px;
@@ -1635,4 +1637,77 @@ body {
 .mdetail_bd .md_content {
   line-height: 22px;
   padding: 10px 15px 0 10px;
+}
+/* list.html */
+.search-box {
+  position: relative;
+}
+.search-box #search_input {
+  line-height: 24px;
+  width: 87%;
+  border-radius: 3px;
+  padding-left: 22px;
+  background: #ffffff url("../images/list_search.png") no-repeat 7px 5px;
+  background-size: 12px 12px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: none;
+  outline: medium;
+}
+.search-box #search_cancel {
+  display: inline-block;
+  position: absolute;
+  right: 7%;
+  top: 7px;
+  height: 24px;
+  width: 22px;
+  background: #ffffff url("../images/cancel.png") no-repeat center;
+  background-size: 12px 12px;
+}
+.list_tabs li {
+  float: left;
+  width: 25%;
+  height: 40px;
+}
+.list_tabs li a {
+  display: inline-block;
+  line-height: 38px;
+  width: 100%;
+  text-align: center;
+  color: #000000;
+}
+.list_tabs li a.tabed {
+  border-bottom: 2px solid #35abe9;
+}
+.list_tabs li .list_filter {
+  background: #ffffff url("../images/filter.png") no-repeat 75% center;
+  background-size: 10px 11px;
+}
+/* more.html */
+.more_bd {
+  margin-top: 38px;
+}
+.more_bd .ps_menu {
+  margin-bottom: 7px;
+}
+.more_bd .ps_menu a {
+  padding: 0 10px 0 10px;
+  background-color: #ffffff;
+}
+.more_bd .more_push {
+  line-height: 42px;
+  padding: 0 10px 0 10px;
+  background: #ffffff;
+}
+.more_bd .more_push div {
+  float: right;
+}
+.more_bd .menu_bottom .bottom_more {
+  background: url("../images/main/more_01.png") no-repeat center 14px;
+  background-size: 27px 7px;
+}
+.more_bd .menu_bottom .bottom_cart {
+  background: url("../images/main/cart_02.png") no-repeat center 8px;
+  background-size: 18px 18px;
 }
