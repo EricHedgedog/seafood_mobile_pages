@@ -921,14 +921,16 @@ body{
 		background: #ffffff;
 	}
 	.swiper-container{
-		width: 190px;
-		height: 190px;
+		// height: 190px;
 		.swiper-wrapper{
 			.swiper-slide{
 				img{
-					 width:100%;
+					 width: 100%;
 				}
 			}
+		}
+		.swiper-pagination{
+			opacity: 0.5;
 		}
 	}
 }
@@ -1520,9 +1522,20 @@ body{
 		}
 	}
 	.rf_upload{
+		height:;
 		padding-bottom:23px;
+		div{
+			float: left;
+			border:none;
+			img{
+				margin-right:10px;
+				width: 50px;
+				height: 50px;
+			} 
+		}
 		.upload-img {
 			display:block;
+			float: left;
 			width: 50px;
 			height:50px;
 			overflow:hidden;
@@ -1722,5 +1735,85 @@ body{
 	.md_content{
 		line-height: 22px;
 		padding: 10px 15px 0 10px;
+	}
+}
+
+/* list.html */
+.search-box{
+	position: relative;
+	#search_input{
+		line-height: 24px;
+		width: 87%;
+		border-radius: 3px;
+		padding-left:22px;
+		background:#ffffff url("../images/list_search.png") no-repeat 7px 5px;
+		background-size: 12px 12px;
+		box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+		border:none;
+		outline: medium;
+	}
+	#search_cancel{
+		display: inline-block;
+		position: absolute;
+		right:7%;
+		top:7px;
+		height: 24px;
+		width: 22px;
+		background:#ffffff url("../images/cancel.png") no-repeat center;
+		background-size: 12px 12px;
+	}
+}
+
+.list_tabs{
+	li{
+		float: left;
+		width: 25%;
+		height: 40px;
+		a{
+			display: inline-block;
+			line-height: 38px;
+			width: 100%;
+			text-align: center;
+			color: #000000;
+		}
+		a.tabed{
+			border-bottom: 2px solid #35abe9;
+		}
+		.list_filter{
+			background:#ffffff url("../images/filter.png") no-repeat 75% center;
+			background-size: 10px 11px;
+		}
+	}
+}
+
+/* more.html */
+.more_bd{
+	margin-top:38px;
+	.ps_menu{
+		margin-bottom: 7px;
+		a{
+			padding: 0 10px 0 10px;
+			background-color: #ffffff;
+		}
+	}
+	.more_push{
+		line-height: 42px;
+		padding: 0 10px 0 10px;
+		background: #ffffff;
+		div{
+			float: right;
+		}
+	}
+	.menu_bottom{
+		.bottom_more{
+			background:url("../images/main/more_01.png") no-repeat center 14px;
+			background-size:27px 7px;
+		}
+		.bottom_cart{
+			background:url("../images/main/cart_02.png") no-repeat center 8px;
+			background-size:18px 18px;
+		}
 	}
 }

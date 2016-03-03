@@ -45,12 +45,61 @@
             <div class="rf_detail">
                 <textarea class="detail_text" placeholder="详细描述："></textarea>
             </div>
-            <div class="c_grey rf_upload">
+            <div class="c_grey rf_upload clearfix">
                 <p>上传图片：</p>
-                <span class="upload-img"><input id="file" accept="image/*" type="file" multiple="multiple"></span>
+                <div id="dvPreview"></div>
+
+                <span class="upload-img"><input id="fileupload" accept="image/*" type="file" multiple="multiple"></span>
             </div>
         </div>
 
     </div>
+    <script type="text/javascript" src="../../Scripts/lib/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/lib/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="../../Scripts/lib/jquery.iframe-transport.js"></script>
+    <script type="text/javascript" src="../../Scripts/lib/jquery.fileupload.js"></script>
+    <script type="text/javascript">
+    $(function () {
+        $('#file').fileupload({
+            dataType: 'json',
+            done: function (e, data) {
+                $.each(data.result.files, function (index, file) {
+                    $('<p/>').text(file.name).appendTo(document.body);
+                });
+            }
+        });
+    });
+
+    $(function () {
+    $("#fileupload").change(function () {
+        if (typeof (FileReader) != "undefined") {
+            var dvPreview = $("#dvPreview");
+            dvPreview.html("");
+            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+            $($(this)[0].files).each(function () {
+                var file = $(this);
+                if (regex.test(file[0].name.toLowerCase())) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        var img = $("<img />");
+                        img.attr("src", e.target.result);
+                        dvPreview.append(img);
+                    }
+                    reader.readAsDataURL(file[0]);
+                } else {
+                    alert(file[0].name + " is not a valid image file.");
+                    dvPreview.html("");
+                    return false;
+                }
+            });
+        } else {
+            alert("This browser does not support HTML5 FileReader.");
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
 </body>
 </html>
