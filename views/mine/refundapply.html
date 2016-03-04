@@ -60,22 +60,11 @@
     <script type="text/javascript" src="../../Scripts/lib/jquery.fileupload.js"></script>
     <script type="text/javascript">
     $(function () {
-        $('#file').fileupload({
-            dataType: 'json',
-            done: function (e, data) {
-                $.each(data.result.files, function (index, file) {
-                    $('<p/>').text(file.name).appendTo(document.body);
-                });
-            }
-        });
-    });
-
-    $(function () {
     $("#fileupload").change(function () {
         if (typeof (FileReader) != "undefined") {
             var dvPreview = $("#dvPreview");
             dvPreview.html("");
-            var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+            var regex = /(.jpg|.jpeg|.gif|.png|.bmp)$/;
             $($(this)[0].files).each(function () {
                 var file = $(this);
                 if (regex.test(file[0].name.toLowerCase())) {
