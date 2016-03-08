@@ -903,7 +903,7 @@ body {
   height: 12px;
   text-align: center;
   border-left: 1px solid #dfdfdf;
-  background: url("../../Content/images/collect.png") no-repeat center 0px;
+  background: url("../images/collect.png") no-repeat center 0px;
   background-size: 15px 15px;
 }
 .p-des .p_price {
@@ -1447,7 +1447,6 @@ body {
   outline: medium;
 }
 .rf_menu .rf_upload {
-  height: ;
   padding-bottom: 23px;
 }
 .rf_menu .rf_upload div {
@@ -1688,9 +1687,109 @@ body {
 .list_tabs li a.tabed {
   border-bottom: 2px solid #35abe9;
 }
-.list_tabs li .list_filter {
+.list_tabs li #list_filter {
   background: #ffffff url("../images/filter.png") no-repeat 75% center;
   background-size: 10px 11px;
+}
+.filter-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: #777;
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.70;
+  opacity: 0.70;
+  z-index: 1;
+}
+.filter {
+  display: none;
+  width: 84%;
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+.filter-hd {
+  padding: 0 10px;
+  height: 38px;
+  line-height: 38px;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.filter-hd .ft_cancel {
+  display: inline-block;
+  width: 20%;
+  height: 38px;
+  float: left;
+  color: #000000;
+}
+.filter-hd .ft_text {
+  text-align: center;
+  width: 60%;
+  float: left;
+  display: inline-block;
+}
+.filter-hd .ft_confirm {
+  float: left;
+  display: inline-block;
+  width: 20%;
+  line-height: 38px;
+  text-align: right;
+  color: #000000;
+}
+.ft-price {
+  padding: 10px 10px 15px 8px;
+  border-top: 1px solid #dfdfdf;
+}
+.ft-price .gang {
+  margin: 0 10px 0 10px;
+}
+.ft-price input {
+  width: 30%;
+  height: 30px;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  border: none;
+  outline: medium;
+  text-align: center;
+}
+.filter_opts {
+  margin-top: 10px;
+}
+.filter_opts li {
+  display: inline-block;
+  line-height: 30px;
+  float: left;
+  width: 30%;
+  margin: 0 5px 5px 0;
+  background: #f5f5f5;
+  border-radius: 3px;
+  text-align: center;
+}
+.filter_opts li.choose {
+  background: #ff5000;
+  color: #ffffff;
+}
+.ft-catagory {
+  padding: 0 8px 15px 8px;
+  border-top: 1px solid #dfdfdf;
+}
+.ft-catagory .cata_title {
+  line-height: 30px;
+}
+.ft-catagory .cata_title .ft_slide {
+  display: inline-block;
+  float: right;
+  width: 6%;
+  height: 30px;
+  background: url("../images/down_arrow.png") no-repeat center center;
+  background-size: 13px 7px;
 }
 /* more.html */
 .more_bd {

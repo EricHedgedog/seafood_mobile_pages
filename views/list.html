@@ -8,8 +8,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minmum-scale=1.0" />
     <meta name="format-detection" content="telephone=no" /> 
-    <link rel="stylesheet" type="text/css" href="../../Content/css/css-reset.css">
-    <link rel="stylesheet" type="text/css" href="../../Content/css/sf-mobile.css">
+    <link rel="stylesheet" type="text/css" href="../Content/css/css-reset.css">
+    <link rel="stylesheet" type="text/css" href="../Content/css/sf-mobile.css">
 </head>
 <body>
 	<div class="sf-hd clearfix">
@@ -21,14 +21,14 @@
         <div class="bal_menu">
             <ul class="list_tabs">
                 <li><a class="list_all tabed" href="">综合</a></li>
-                <li><a class="list_sold" href="">销量</a></li>
-                <li><a class="list_rank" href="">人气</a></li>
-                <li><a class="list_filter" href="">筛选</a></li>
+                <li><a id="list_sold" href="">销量</a></li>
+                <li><a id="list_rank" href="">人气</a></li>
+                <li><a id="list_filter" href="javascript:;">筛选</a></li>
             </ul>
         </div>
         <div class="clt_item">
             <div class="clt_pic">
-                <img src="../../Content/images/main/pic08.jpg">
+                <img src="../Content/images/main/pic08.jpg">
             </div>
             <div class="clt_name">
                 <a href="">特技大螃蟹3斤装</a>
@@ -41,7 +41,7 @@
 
         <div class="clt_item">
             <div class="clt_pic">
-                <img src="../../Content/images/main/pic08.jpg">
+                <img src="../Content/images/main/pic08.jpg">
             </div>
             <div class="clt_name">
                 <a href="">特技大螃蟹3斤装</a>
@@ -54,7 +54,7 @@
 
         <div class="clt_item">
             <div class="clt_pic">
-                <img src="../../Content/images/main/pic08.jpg">
+                <img src="../Content/images/main/pic08.jpg">
             </div>
             <div class="clt_name">
                 <a href="">特技大螃蟹3斤装</a>
@@ -67,7 +67,7 @@
 
         <div class="clt_item">
             <div class="clt_pic">
-                <img src="../../Content/images/main/pic08.jpg">
+                <img src="../Content/images/main/pic08.jpg">
             </div>
             <div class="clt_name">
                 <a href="">特技大螃蟹3斤装</a>
@@ -80,7 +80,7 @@
 
         <div class="clt_item">
             <div class="clt_pic">
-                <img src="../../Content/images/main/pic08.jpg">
+                <img src="../Content/images/main/pic08.jpg">
             </div>
             <div class="clt_name">
                 <a href="">特技大螃蟹3斤装</a>
@@ -92,11 +92,89 @@
         </div>
  
     </div>
-    <script type="text/javascript" src="../../Scripts/lib/jquery-1.12.1.min.js"></script>
+    <div class="filter-bg"></div>
+    <div class="filter">
+        <div class="filter-hd">
+            <a class="ft_cancel" href="javascript:;">取消</a>
+            <span class="ft_text font_14">筛选</span>
+            <a class="ft_confirm" href="javascript:;">确定</a>
+        </div>
+        <div class="ft-price">
+            <span>价格：</span>
+            <span>
+                <input type="number" placeholder="最低价" />
+                <span class="gang">-</span>
+                <input type="number" placeholder="最高价" />
+            </span>
+            <div class="ft_opts">
+                <ul class="filter_opts clearfix">
+                    <li>10-30</li>
+                    <li>31-59</li>
+                    <li>60-89</li>
+                    <li>90-199</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="ft-catagory">
+            <div class="cata_title">
+                <span>鱼类</span>
+                <span class="ft_slide"></span>
+            </div>
+            <div class="">
+                <ul class="filter_opts clearfix">
+                    <li>三文鱼</li>
+                    <li>海参斑鱼</li>
+                    <li>黄花鱼</li>
+                    <li>三文鱼</li>
+                    <li>海参斑鱼</li>
+                    <li>黄花鱼</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="ft-catagory">
+            <div class="cata_title">
+                <span>虾类</span>
+                <span class="ft_slide"></span>
+            </div>
+            <div class="">
+                <ul class="filter_opts clearfix">
+                    <li>三文鱼</li>
+                    <li>海参斑鱼</li>
+                    <li>黄花鱼</li>
+                    <li>三文鱼</li>
+                    <li>海参斑鱼</li>
+                    <li>黄花鱼</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../Scripts/lib/jquery-1.12.1.min.js"></script>
     <script type="text/javascript">
     $(function(){
-        $('#search_cancel').click(function(){
+        $('#search_cancel').click(function(ev){
             $('#search_input').val('');
+        })
+    })
+    $(function(){
+        $('#list_filter').click(function(){
+            $('.filter,.filter-bg').show();
+        })
+    })
+    $(function(){
+        $('.ft_cancel').click(function(){
+            $('.filter,.filter-bg').hide();
+        })
+    })
+    $(function(){
+        $('.ft_confirm').click(function(){
+            $('.filter,.filter-bg').hide();
+        })
+    })
+    $(function(){
+        $('.filter_opts li').click(function(){
+            $(this).toggleClass('choose');
         })
     })
     </script>
